@@ -1,6 +1,13 @@
+
+## W3Gamez Network: Unlocking the power of On-Chain Gaming
+W3Gamez Network is a Layer-2 Optimistic Rollup blockchain, designed specifically for gaming by Web3Games.com, leveraging OP Stack for its foundation and ensuring data availability through NEAR.
+
+---
+
 ## How to use
 ```bash
-yarn dev
+npm install
+
+npm start
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
