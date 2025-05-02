@@ -16,6 +16,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
+    "@next/swc-win32-x64-msvc": "^15.3.1",
     "@polkadot/api": "^9.6.1",
     "@polkadot/extension-dapp": "^0.42.10",
     "@polkadot/keyring": "^10.1.11",
