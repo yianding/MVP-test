@@ -1,6 +1,6 @@
 const asyncErrorHandler = require('../middlewares/helpers/asyncErrorHandler');
 // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const paytm = require('paytmchecksum');
+// const paytm = require('paytmchecksum');
 const https = require('https');
 const Payment = require('../models/paymentModel');
 const ErrorHandler = require('../utils/errorHandler');
@@ -24,31 +24,32 @@ exports.processPayment = asyncErrorHandler(async (req, res, next) => {
   params['EMAIL'] = email;
   params['MOBILE_NO'] = phoneNo;
 
-  let paytmChecksum = paytm.generateSignature(params, process.env.PAYTM_MERCHANT_KEY);
-  paytmChecksum
-    .then(function (checksum) {
-      let paytmParams = {
-        ...params,
-        CHECKSUMHASH: checksum,
-      };
+  // let paytmChecksum = paytm.generateSignature(params, process.env.PAYTM_MERCHANT_KEY);
+//   paytmChecksum
+//     .then(function (checksum) {
+//       let paytmParams = {
+//         ...params,
+//         CHECKSUMHASH: checksum,
+//       };
 
-      res.status(200).json({
-        paytmParams,
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+//       res.status(200).json({
+//         paytmParams,
+//       });
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
 });
 
 // Paytm Callback
 exports.paytmResponse = (req, res, next) => {
   // console.log(req.body);
 
-  let paytmChecksum = req.body.CHECKSUMHASH;
+  // let paytmChecksum = req.body.CHECKSUMHASH;
   delete req.body.CHECKSUMHASH;
 
-  let isVerifySignature = paytm.verifySignature(req.body, process.env.PAYTM_MERCHANT_KEY, paytmChecksum);
+  // let isVerifySignature = paytm.verifySignature(req.body, process.env.PAYTM_MERCHANT_KEY, paytmChecksum);
+  let isVerifySignature = false ;
   if (isVerifySignature) {
     // console.log("Checksum Matched");
 
