@@ -81,7 +81,6 @@ const Recent = ()=>{
         clearTimeout(time)
         const  pool_a = swapTokenTop.tokenId
         const  pool_b = swapTokenTail.tokenId
-
         const token_number = input_data
         if(swapTokenTop.tokenId !==swapTokenTail.tokenId){
             if(input_data!== "" && input_data!== "0"){
@@ -97,6 +96,7 @@ const Recent = ()=>{
                     setRequestData(false)
                     setSwapTopPutValue(token_number)
                     if(result){
+                        
                     if (result[1] == undefined) {
                         setSwapOutPutValue(0)
                     } else {
@@ -266,6 +266,7 @@ const Recent = ()=>{
                                    value={`${swapOutPutValue}`}
 
                             />
+                            
                         </div>
                         <div className="text-sm mt-2 flex ml-1 text-gray-400">Balance:{swapTokenTail.data}</div>
                     </div>
@@ -525,7 +526,6 @@ const Swap = () =>{
                                     <i className="fa fa-cog " aria-hidden="true"></i>
                                 </div>
                             </Tab.List>
-                            {/*Recent*/}
                             <Tab.Panels className="mt-2 ">
                                 <Tab.Panel
                                     className={classNames(' rounded-xl p-1  md:w-97 ')}>
@@ -533,12 +533,11 @@ const Swap = () =>{
                                     <Recent/>
 
                                 </Tab.Panel>
-                                {/*Popular*/}
-                                <Tab.Panel className={classNames('text-gray-300 rounded-xl p-1 md:w-97')}>
+                                {/* <Tab.Panel className={classNames('text-gray-300 rounded-xl p-1 md:w-97')}>
 
-                                    {/*<Popular/>*/}
+                                    <Popular/>
 
-                                </Tab.Panel>
+                                </Tab.Panel> */}
                             </Tab.Panels>
                         </Tab.Group>
                     </div>
