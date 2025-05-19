@@ -132,7 +132,7 @@ const  Trident = () => {
                                         {item.contents.map((contents)=>(
                                             <Menu.Item key={contents.name}>
                                                 <Link href={contents.href}>
-                                                    <a className=" hover:bg-gray-800 hover:text-white  block px-4 py-2 text-sm" >
+                                                    <a className=" text-sm" >
                                                         {contents.name}</a>
                                                 </Link>
                                             </Menu.Item>
