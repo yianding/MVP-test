@@ -1,11 +1,11 @@
 
 # requirements:
-1,run windows system.
-2,install curl first
-3,install python 3.11.8
-4,MSVC v143 - VS 2022 C++ x64/x86 Build Tools,Include Windows 10/11 SDK
-5,node version 20.19.0
-## How to use
+## 1,run windows system.
+## 2,install curl first
+## 3,install python 3.11.8
+## 4,MSVC v143 - VS 2022 C++ x64/x86 Build Tools,Include Windows 10/11 SDK
+## 5,node version 20.19.0
+# How to use
 ```bash
 npm install
 
