@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/api/tasks/index.tsx"  ],
   "exclude": [
     "node_modules"
   ]
